@@ -59,12 +59,12 @@ body{font-family:var(--fb);background:var(--K);color:var(--C);overflow-x:hidden;
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
 /* ═══ HERO ═══ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px var(--px) 80px;background:var(--K);overflow:hidden}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;background:var(--K);overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(243,239,224,.03) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
 .hero-glow{position:absolute;top:-10%;right:-5%;width:680px;height:680px;background:radial-gradient(circle,rgba(224,24,92,.12),transparent 60%);pointer-events:none;animation:glowpulse 9s ease-in-out infinite}
 .hero-glow2{position:absolute;bottom:10%;left:-8%;width:380px;height:380px;background:radial-gradient(circle,rgba(232,180,74,.05),transparent 65%);pointer-events:none}
 @keyframes glowpulse{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
-.hero-inner{position:relative;z-index:2;max-width:var(--mx);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero-inner{position:relative;z-index:2;max-width:var(--mx);margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:0 var(--px)}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:var(--rp);background:var(--Fa);border:1px solid var(--Fb);color:var(--F);font-size:10px;font-weight:600;letter-spacing:2.8px;text-transform:uppercase;margin-bottom:30px}
 .hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--F);animation:blink 2.4s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -307,8 +307,8 @@ body{font-family:var(--fb);background:var(--K);color:var(--C);overflow-x:hidden;
 .fsuccess{display:none;background:rgba(76,180,80,.08);border:1px solid rgba(76,180,80,.25);border-radius:var(--rm);padding:26px;text-align:center;color:#4CB450;font-size:16px;font-weight:600;margin-top:12px}
 
 /* ─── FOOTER ─── */
-footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgba(255,255,255,.04)}
-.ft-in{max-width:var(--mx);margin:0 auto}
+footer{background:var(--K3);padding:48px 0 22px;border-top:1px solid rgba(255,255,255,.04)}
+.ft-in{max-width:var(--mx);margin:0 auto;padding:0 var(--px)}
 .ft-top{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px}
 .ft-tag{font-size:12px;color:var(--S);max-width:200px;line-height:1.65;margin-top:12px}
 .fcol h4{font-size:9px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--S);margin-bottom:14px}
@@ -389,7 +389,7 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
 .sol-closer-d{font-size:12.5px;color:var(--S)}
 
 /* ─── BENEFICI inline (inside icone section) ─── */
-.ben-inline{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;margin-top:52px;padding-top:40px;border-top:1px solid rgba(28,28,28,.08)}
+.ben-inline{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:52px;padding-top:40px;border-top:1px solid rgba(28,28,28,.08)}
 .ben-tag{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(28,28,28,.4);display:block;margin-bottom:12px}
 .ben-tag::before{content:'— '}
 .ben-inline-title{font-family:var(--fd);font-size:clamp(22px,2.4vw,32px);line-height:1.07;letter-spacing:-1px;color:var(--K);margin-bottom:22px}
@@ -398,7 +398,34 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
 .ben-list li{display:flex;align-items:flex-start;gap:13px;font-size:14px;color:var(--K);line-height:1.5}
 .ben-check{width:22px;height:22px;border-radius:50%;background:var(--Fa);border:1px solid var(--Fb);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .ben-check svg{width:11px;height:11px;color:var(--F)}
-.ben-inline-right{flex-shrink:0}
+.ben-inline-right{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+
+/* ─── SOL TOP 2-COL ─── */
+.sol-top-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.sol-top-grid .sol-text-block{max-width:none}
+@media(max-width:1100px){.sol-top-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ─── IMAGE SLOTS ─── */
+.img-slot{border-radius:var(--rl);overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:360px;position:relative}
+.img-slot-dark{background:rgba(255,255,255,.03);border:1.5px dashed rgba(255,255,255,.12)}
+.img-slot-light{background:rgba(28,28,28,.05);border:1.5px dashed rgba(28,28,28,.12)}
+.img-slot::after{font-size:11px;letter-spacing:1px;text-transform:uppercase;pointer-events:none;font-family:var(--fb)}
+.img-slot-dark::after{content:'+ Inserisci immagine';color:rgba(243,239,224,.18)}
+.img-slot-light::after{content:'+ Inserisci immagine';color:rgba(28,28,28,.18)}
+.img-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;display:block;border-radius:calc(var(--rl) - 2px)}
+.img-slot:has(img[src]:not([src=""]))::after{display:none}
+.img-slot-sm{min-height:240px}
+
+/* ─── COMPANY LOGO SLOT ─── */
+.cc-header-right{display:flex;align-items:center;gap:16px}
+.cc-logo-slot{width:76px;height:38px;border-radius:9px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cc-logo-slot img{width:100%;height:100%;object-fit:contain;padding:6px;display:block}
+.cc-logo-slot:not(:has(img[src]:not([src=""])))::after{content:'LOGO';font-size:8px;color:rgba(243,239,224,.2);letter-spacing:2px;font-family:var(--fm)}
+
+/* ─── TARGET CLOSING ─── */
+.target-closing{font-size:14px;color:rgba(28,28,28,.6);line-height:1.65;margin-top:16px;font-style:italic}
+
+@media(max-width:1100px){.ben-inline{grid-template-columns:1fr;gap:32px}}
 </style>
 </head>
 <body>
@@ -424,9 +451,9 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
     </div>
   </a>
   <nav class="hnav">
+    <a href="#servizi">Servizi</a>
     <a href="#soluzione">Soluzione</a>
     <a href="#metodo">Metodo</a>
-    <a href="#servizi">Servizi</a>
     <a href="#clienti">Clienti</a>
     <a href="#contatti">Contatti</a>
   </nav>
@@ -578,24 +605,29 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
 <section class="sol" id="soluzione">
   <div class="sol-glow"></div>
   <div class="ctr">
-    <!-- Top: text only (left-aligned) -->
+    <!-- Top: testo a sinistra + immagine a destra -->
     <div class="sol-top rv">
-      <div class="sol-text-block">
-        <span class="sol-tag">La Soluzione</span>
-        <h2>"Un unico partner che governa la tua <em>comunicazione."</em></h2>
-        <p class="sol-desc">Non siamo un fornitore in più da coordinare. Siamo il partner che unisce strategia, esecuzione e performance in un'unica regia, per rendere la comunicazione più coerente, più fluida e più misurabile.</p>
-        <ul class="sol-bullets">
-          <li><span class="sb-dot"></span>Una direzione strategica condivisa</li>
-          <li><span class="sb-dot"></span>Coordinamento tra canali, team e fornitori</li>
-          <li><span class="sb-dot"></span>Execution allineata agli obiettivi</li>
-          <li><span class="sb-dot"></span>Reporting continuo e ottimizzazione nel tempo</li>
-        </ul>
-        <a href="#contatti" class="btn bo btn-lg">Parliamone <span class="arr">›</span></a>
+      <div class="sol-top-grid">
+        <div class="sol-text-block">
+          <span class="sol-tag">La Soluzione</span>
+          <h2>"Un unico partner che governa la tua <em>comunicazione."</em></h2>
+          <p class="sol-desc">Non siamo un fornitore in più da coordinare. Siamo il partner che unisce strategia, esecuzione e performance in un'unica regia, per rendere la comunicazione più coerente, più fluida e più misurabile.</p>
+          <ul class="sol-bullets">
+            <li><span class="sb-dot"></span>Una direzione strategica condivisa</li>
+            <li><span class="sb-dot"></span>Coordinamento tra canali, team e fornitori</li>
+            <li><span class="sb-dot"></span>Execution allineata agli obiettivi</li>
+            <li><span class="sb-dot"></span>Reporting continuo e ottimizzazione nel tempo</li>
+          </ul>
+          <a href="#contatti" class="btn bo btn-lg">Parliamone <span class="arr">›</span></a>
+        </div>
+        <div class="img-slot img-slot-dark">
+          <!-- Immagine: sostituire con <img src="PATH" alt="Descrizione"> -->
+        </div>
       </div>
     </div>
 
     <!-- Bottom: full-width timeline -->
-    <div class="sol-timeline-wrap rv">
+    <div class="sol-timeline-wrap rv" id="metodo">
       <div class="sol-tl-label">
         <span class="sol-tl-tag">Come lavoriamo</span>
         <div class="sol-tl-title">Un metodo strutturato e orientato al <em>risultato.</em></div>
@@ -677,6 +709,9 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
         </ul>
       </div>
       <div class="ben-inline-right">
+        <div class="img-slot img-slot-light img-slot-sm" style="width:100%">
+          <!-- Immagine: sostituire con <img src="PATH" alt="Descrizione"> -->
+        </div>
         <a href="#contatti" class="btn bf btn-lg">Richiedi una consulenza <span class="arr">›</span></a>
       </div>
     </div>
@@ -701,7 +736,10 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
           <div class="cc-name">Ariston</div>
           <div class="cc-sector">Heating &amp; Comfort · Settore industriale consumer</div>
         </div>
-        <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2022–2024</span>
+        <div class="cc-header-right">
+          <div class="cc-logo-slot"><!-- Logo: sostituire con <img src="logo-ariston.png" alt="Ariston"> --></div>
+          <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2022–2024</span>
+        </div>
       </div>
       <div class="cc-body">
         <div class="cc-desc">
@@ -740,7 +778,10 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
           <div class="cc-name">Fanuc</div>
           <div class="cc-sector">Industrial Automation · Robotica &amp; CNC</div>
         </div>
-        <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2023–ongoing</span>
+        <div class="cc-header-right">
+          <div class="cc-logo-slot"><!-- Logo: sostituire con <img src="logo-fanuc.png" alt="Fanuc"> --></div>
+          <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2023–ongoing</span>
+        </div>
       </div>
       <div class="cc-body">
         <div class="cc-desc">
@@ -779,7 +820,10 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
           <div class="cc-name">Humanitas</div>
           <div class="cc-sector">Healthcare &amp; Ricerca Clinica · Eccellenza medica</div>
         </div>
-        <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2023–ongoing</span>
+        <div class="cc-header-right">
+          <div class="cc-logo-slot"><!-- Logo: sostituire con <img src="logo-humanitas.png" alt="Humanitas"> --></div>
+          <span style="font-family:var(--fm);font-size:10px;color:var(--S)">2023–ongoing</span>
+        </div>
       </div>
       <div class="cc-body">
         <div class="cc-desc">
@@ -856,9 +900,9 @@ footer{background:var(--K3);padding:48px var(--px) 22px;border-top:1px solid rgb
       </div>
       <div class="fcol">
         <h4>Pagina</h4>
+        <a href="#servizi">Servizi</a>
         <a href="#soluzione">La soluzione</a>
         <a href="#metodo">Metodo</a>
-        <a href="#servizi">Servizi</a>
         <a href="#clienti">Clienti</a>
         <a href="#contatti">Contatti</a>
       </div>
