@@ -101,7 +101,7 @@ body{font-family:var(--fb);background:var(--K);color:var(--C);overflow-x:hidden;
 
 /* ═══ TARGET — "Più cresce la comunicazione" ═══ */
 .target{background:var(--YW);color:var(--K);padding:96px 0;overflow:hidden}
-.target-inner{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.target-inner{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:start}
 .target-tag{font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(28,28,28,.4);display:inline-block;margin-bottom:18px}
 .target-tag::before{content:'— '}
 .target h2{font-family:var(--fd);font-size:clamp(32px,3.8vw,54px);line-height:1.04;letter-spacing:-1.5px;color:var(--K);margin-bottom:26px}
@@ -331,7 +331,7 @@ footer{background:var(--K3);padding:48px 0 22px;border-top:1px solid rgba(255,25
 @media(max-width:1100px){
   .hero-inner,.target-inner{grid-template-columns:1fr;gap:40px}
   .ic-grid{grid-template-columns:repeat(2,1fr)}
-  .srv-grid-2x2{grid-template-columns:1fr 1fr}
+  .srv-grid-2x2{grid-template-columns:1fr 1fr 1fr}
   .sol-steps,.gov-steps{grid-template-columns:repeat(2,1fr);gap:24px}
   .sol-steps::before{display:none}
   .sol-top{margin-bottom:36px}
@@ -641,32 +641,51 @@ footer{background:var(--K3);padding:48px 0 22px;border-top:1px solid rgba(255,25
       </div>
 
       <div class="rv d1">
-        <div class="srv-intro">Un sistema coordinato di competenze, non un elenco di attività indipendenti.</div>
+        <div class="srv-intro">Sei competenze integrate sotto un'unica regia. Nessun fornitore da coordinare — solo risultati.</div>
         <div class="srv-grid-2x2">
+
           <div class="sc">
-            <span class="sc-tag">Core</span>
-            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div class="sc-title">Consulenza Strategica</div>
-            <div class="sc-desc">Definizione degli obiettivi, analisi del mercato e costruzione di una roadmap operativa con KPI chiari.</div>
+            <span class="sc-tag">Strategy</span>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <div class="sc-title">Strategia Digitale</div>
+            <div class="sc-desc">Audit della comunicazione, definizione KPI e roadmap operativa. Chiarezza prima di investire un euro.</div>
           </div>
+
           <div class="sc">
-            <span class="sc-tag">Execution</span>
-            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-            <div class="sc-title">Multi-channel Execution</div>
-            <div class="sc-desc">Attivazione e gestione coordinata di tutti i canali digitali e offline verso un unico obiettivo condiviso.</div>
+            <span class="sc-tag">Brand</span>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+            <div class="sc-title">Brand Identity & Design</div>
+            <div class="sc-desc">Identità visiva, posizionamento e sistema grafico coerente su tutti i touchpoint istituzionali e digitali.</div>
           </div>
+
+          <div class="sc">
+            <span class="sc-tag">Media</span>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div class="sc-title">ADV & Performance</div>
+            <div class="sc-desc">Campagne Google, Meta e programmatic con budget controllato, ottimizzazione continua e rendiconto chiaro.</div>
+          </div>
+
+          <div class="sc">
+            <span class="sc-tag">Social</span>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+            <div class="sc-title">Social Media Management</div>
+            <div class="sc-desc">Gestione canali, piano editoriale strutturato e reporting integrato agli obiettivi di business.</div>
+          </div>
+
           <div class="sc">
             <span class="sc-tag">Creative</span>
-            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
-            <div class="sc-title">Content & Creative</div>
-            <div class="sc-desc">Produzione di contenuti coerenti su tutti i touch point. Un'unica voce, un'unica storia su ogni canale.</div>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+            <div class="sc-title">Content & Produzione</div>
+            <div class="sc-desc">Video corporate, foto, motion design e materiali digitali per ogni fase della comunicazione.</div>
           </div>
+
           <div class="sc">
-            <span class="sc-tag">Intelligence</span>
-            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <div class="sc-title">Data & Analytics</div>
-            <div class="sc-desc">Raccolta, integrazione e interpretazione dei dati. Reporting centralizzato per decisioni basate su evidenze.</div>
+            <span class="sc-tag">PR</span>
+            <div class="sc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="sc-title">Influencer & PR</div>
+            <div class="sc-desc">Selezione influencer, media relations e amplificazione per brand con un'immagine da proteggere.</div>
           </div>
+
         </div>
       </div>
     </div>
